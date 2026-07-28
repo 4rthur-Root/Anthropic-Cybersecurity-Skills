@@ -108,7 +108,7 @@ description: >-
   Include keywords for search/filtering.
   This is what agents read to decide whether to use this skill.
 domain: cybersecurity
-subdomain: red-teaming | digital-forensics | compliance-governance | etc.
+subdomain: red-teaming  # e.g. digital-forensics, compliance-governance, etc.
 tags:
   - tool-names (mimikatz, burp-suite, etc.)
   - frameworks (active-directory, cloud, kubernetes, etc.)
@@ -125,7 +125,8 @@ mitre_attack:
 mitre_atlas:
   - AML.P1.003
 mitre_d3fend:
-  - D3-CAA | D3-PCA
+  - D3-CAA
+  - D3-PCA
 nist_ai_rmf:
   - GOV-1
 mitre_f3:
@@ -459,7 +460,7 @@ jq '[.skills[] | .subdomain] | group_by(.) | map({subdomain: .[0], count: length
 ### Framework Maintenance
 
 - **MITRE ATT&CK updates**: v14 is current; check attack.mitre.org for latest
-- **NIST CSF 2.0**: Rolled out Feb 2024; use new control IDs (e.g., DE.CM not DE.CM-01)
+- **NIST CSF 2.0**: Rolled out Feb 2024; use subcategory IDs as in this repo (e.g., `DE.CM-01`, `PR.PS-01`)
 - **Technique changes**: Techniques may deprecate; verify via attack.mitre.org
 
 ### Subdomain Assignment
@@ -498,8 +499,10 @@ Before submitting a PR:
 ### Manual Verification
 
 ```bash
-# Validate YAML frontmatter:
-python3 -c "import yaml; yaml.safe_load(open('skills/my-skill/SKILL.md'))" 
+# Validate skill frontmatter and conventions (repo validator):
+python3 tools/validate-skill.py skills/my-skill/
+# Or validate all skills:
+python3 tools/validate-skill.py --all
 
 # Check for framework ID patterns:
 grep -E "^  - (T1[0-9]{3,4}(\.[0-9]{3})?|DE\.[A-Z]{2}-[0-9]{2}|AML\.)" skills/*/SKILL.md
@@ -538,6 +541,6 @@ done
 | Add skill | `mkdir skills/name && cat > SKILL.md` |
 | Search by technique | `grep -r "T1055" skills/` |
 | Search by subdomain | `grep "subdomain: red-teaming" skills/*/SKILL.md` |
-| Validate YAML | `python3 -c "import yaml; yaml.safe_load(open(...))` |
+| Validate skill | `python3 tools/validate-skill.py skills/my-skill/` |
 | Regenerate index | `python3 generate_index.py` (if exists) |
 | View mapping coverage | Open `mappings/mitre-attack/attack-navigator-layer.json` in ATT&CK Navigator |
