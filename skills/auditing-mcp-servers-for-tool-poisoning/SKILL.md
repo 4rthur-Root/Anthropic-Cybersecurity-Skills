@@ -15,9 +15,9 @@ tags:
 version: '1.0'
 author: mahipal
 license: Apache-2.0
-nist_csf:
+nist_ai_rmf:
 - MANAGE-2.2
-mitre_attack:
+atlas_techniques:
 - AML.T0010
 ---
 # Auditing MCP Servers for Tool Poisoning

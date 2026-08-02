@@ -15,9 +15,9 @@ tags:
 version: '1.0'
 author: mahipal
 license: Apache-2.0
-nist_csf:
+nist_ai_rmf:
 - GOVERN-1.3
-mitre_attack:
+atlas_techniques:
 - AML.T0053
 ---
 # Securing Agentic AI Tool Invocation

@@ -16,7 +16,7 @@ version: '1.0'
 author: mahipal
 license: Apache-2.0
 nist_csf:
-- PR.DS-06
+- PR.DS-01
 mitre_attack:
 - T1195
 ---
@@ -28,7 +28,7 @@ Build-provenance verification answers a question that defeats many supply-chain 
 
 This skill covers verifying signatures and SLSA provenance with **cosign** (`cosign verify`, `cosign verify-attestation`, `cosign verify-blob-attestation`) and **slsa-verifier** (`slsa-verifier verify-artifact`), enforcing the builder identity (the GitHub Actions workflow that produced the artifact) and the expected source repository. Keyless verification ties trust to an OIDC issuer (e.g., `https://token.actions.githubusercontent.com`) and a certificate identity rather than a long-lived private key.
 
-This maps to MITRE ATT&CK **T1195 — Supply Chain Compromise** (provenance verification detects/blocks tampered artifacts) and NIST CSF **PR.DS-06** (integrity-checking mechanisms are used to verify software, firmware, and information integrity).
+This maps to MITRE ATT&CK **T1195 — Supply Chain Compromise** (provenance verification detects/blocks tampered artifacts) and NIST CSF **PR.DS-01** (the confidentiality, integrity, and availability of data-at-rest are protected; CSF 2.0 absorbed the retired 1.1 PR.DS-06 integrity-checking outcome here).
 
 ## When to Use
 
