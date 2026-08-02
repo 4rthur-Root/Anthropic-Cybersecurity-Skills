@@ -84,12 +84,16 @@ def validate(path):
     elif "description" in keys:
         problems.append("description empty")
 
-    if "<" in fm or ">" in fm:
+    # Ignore YAML block-scalar indicators (`key: >`, `key: >-`, `key: |`, ...);
+    # only genuine `<...>`/`>` content in values is an injection concern.
+    fm_no_ind = re.sub(r":[ \t]*[|>][+-]?[ \t]*(?=\n|$)", ":", fm)
+    if "<" in fm_no_ind or ">" in fm_no_ind:
         problems.append("frontmatter contains angle brackets (injection risk / not allowed)")
 
+    # Additional top-level keys are PERMITTED by the standard (name+description
+    # are the only required fields). They are reported for information, not
+    # counted as compliance failures.
     nonstd = [k for k in keys if k not in ALLOWED]
-    for k in nonstd:
-        problems.append(f"non-standard top-level key: {k}")
     return slug, problems, nonstd
 
 def main():

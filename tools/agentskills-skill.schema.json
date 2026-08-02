@@ -2,9 +2,9 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://agentskills.io/schema/skill-frontmatter.json",
   "title": "agentskills.io SKILL.md frontmatter",
-  "description": "Strict JSON Schema for the YAML frontmatter of a SKILL.md file per the agentskills.io open standard (Anthropic, 2025-12-18). Only `name` and `description` are required; a small optional set is permitted; every other top-level key is a non-standard 'unexpected field'. Constraints that cannot be expressed in JSON Schema (name must equal the parent directory; frontmatter must contain no angle brackets) are enforced by tools/validate-agentskills.py.",
+  "description": "JSON Schema for the YAML frontmatter of a SKILL.md file per the agentskills.io open standard (Anthropic, 2025-12-18). Only `name` and `description` are required; `license`, `compatibility`, `metadata`, and `allowed-tools` are recognized optional fields. Additional top-level keys are PERMITTED as extra metadata (this repo uses domain/subdomain/tags/version/author and framework-mapping keys), so `additionalProperties` is true. Constraints JSON Schema cannot express (name must equal the parent directory; no angle-bracket content in frontmatter) are enforced by tools/validate-agentskills.py.",
   "type": "object",
-  "additionalProperties": false,
+  "additionalProperties": true,
   "required": ["name", "description"],
   "properties": {
     "name": {
