@@ -1,6 +1,6 @@
 ---
 name: orchestrating-llm-attacks-with-pyrit
-description: Build multi-turn, Crescendo, and Tree-of-Attacks-with-Pruning (TAP) automated attack chains against conversational LLM agents using Microsoft PyRIT, with adversarial chat and scorer feedback loops.
+description: Build automated multi-turn adversarial attacks against conversational LLM targets using Microsoft PyRIT's RedTeamingOrchestrator, CrescendoOrchestrator (gradual escalation), and TreeOfAttacksWithPruningOrchestrator (adaptive branching), with scorer feedback loops and persisted conversation memory. Use when single-shot LLM scanning is insufficient and you need multi-turn, scorer-driven AI red-team campaigns against a chatbot or agent.
 domain: cybersecurity
 subdomain: ai-security
 tags:

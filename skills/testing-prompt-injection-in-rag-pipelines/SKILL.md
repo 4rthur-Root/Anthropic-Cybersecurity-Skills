@@ -1,6 +1,10 @@
 ---
 name: testing-prompt-injection-in-rag-pipelines
-description: Probe RAG applications for prompt injection via poisoned retrieved context and embedding manipulation.
+description: Probes Retrieval-Augmented Generation pipelines for indirect prompt injection
+  via poisoned retrieved documents and embedding-space manipulation, using NVIDIA garak,
+  Promptfoo red-team plugins, and Microsoft PyRIT against vector stores like FAISS,
+  Chroma, Pinecone, or pgvector. Use when security-testing a RAG chatbot or document-Q&A
+  system, validating retrieval guardrails, or gating CI/CD on prompt-template/retriever changes.
 domain: cybersecurity
 subdomain: ai-security
 tags:

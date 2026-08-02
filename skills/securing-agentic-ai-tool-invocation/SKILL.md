@@ -1,6 +1,11 @@
 ---
 name: securing-agentic-ai-tool-invocation
-description: Apply least-privilege tool allowlisting, identity binding, and human-in-the-loop controls for agent tool calls.
+description: Implements defense-in-depth controls at an AI agent's tool-invocation
+  boundary using tool allowlisting, least-privilege identity binding, NeMo Guardrails
+  policy enforcement, human-in-the-loop approval, and audit logging. Use when hardening
+  an agent that calls tools with real side effects (email, payments, file writes,
+  code execution), mapping OWASP Agentic AI Top 10 controls, or bounding prompt-injection
+  blast radius.
 domain: cybersecurity
 subdomain: ai-security
 tags:

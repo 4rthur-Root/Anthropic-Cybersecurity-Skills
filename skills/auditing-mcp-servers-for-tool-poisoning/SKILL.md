@@ -1,6 +1,6 @@
 ---
 name: auditing-mcp-servers-for-tool-poisoning
-description: Scan Model Context Protocol servers and tool metadata for poisoning, SSRF, and unauthenticated exposure.
+description: Audit MCP servers for tool poisoning, tool shadowing, rug pulls, SSRF, and unauthenticated exposure using Invariant Labs' mcp-scan for static/runtime scanning plus manual SSRF/auth checks and description pinning. Use before adding a new MCP server to an agent stack, when reviewing an internal MCP server, detecting rug pulls, or investigating an agent's unexpected tool-driven behavior.
 domain: cybersecurity
 subdomain: ai-security
 tags:

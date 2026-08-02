@@ -1,7 +1,6 @@
 ---
 name: acquiring-disk-image-with-dd-and-dcfldd
-description: Create forensically sound bit-for-bit disk images using dd and dcfldd
-  while preserving evidence integrity through hash verification.
+description: Create forensically sound bit-for-bit disk images with dd or dcfldd on a Linux forensic workstation, preserving evidence integrity through hash verification (MD5/SHA) during acquisition. Use when imaging a suspect drive, USB device, or memory card for investigation, preserving volatile disk evidence during incident response, or producing a verified copy for legal or law-enforcement proceedings before any destructive analysis.
 domain: cybersecurity
 subdomain: digital-forensics
 tags:

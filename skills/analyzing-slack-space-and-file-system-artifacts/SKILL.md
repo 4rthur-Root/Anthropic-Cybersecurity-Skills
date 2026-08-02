@@ -1,7 +1,6 @@
 ---
 name: analyzing-slack-space-and-file-system-artifacts
-description: Examine file system slack space, MFT entries, USN journal, and alternate
-  data streams to recover hidden data and reconstruct file activity on NTFS volumes.
+description: Examine NTFS slack space, MFT entries, the USN Change Journal, and Alternate Data Streams (ADS) to recover hidden or residual data, reconstruct deleted-file metadata, and reconstruct available file-system change activity from USN records. Use during deep forensic analysis of an NTFS image when standard file recovery is insufficient, such as hunting for data hidden in ADS.
 domain: cybersecurity
 subdomain: digital-forensics
 tags:

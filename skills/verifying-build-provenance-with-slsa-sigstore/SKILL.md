@@ -1,6 +1,11 @@
 ---
 name: verifying-build-provenance-with-slsa-sigstore
-description: Verify signed artifacts and SLSA build provenance with Sigstore cosign and slsa-verifier, enforce keyless OIDC identity, and apply SLSA Build levels to harden the software supply chain.
+description: Verifies artifact signatures and SLSA provenance using Sigstore's
+  cosign (verify, verify-attestation, verify-blob-attestation) and slsa-verifier
+  (verify-artifact), enforcing keyless OIDC builder identity and source repo against
+  SLSA Build levels. Use in CI/CD before deploying artifacts, when consuming third-party
+  attestations, establishing a SLSA Build L3 pipeline, or confirming provenance
+  during incident response or admission control.
 domain: cybersecurity
 subdomain: supply-chain-security
 tags:

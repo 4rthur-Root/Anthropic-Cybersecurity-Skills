@@ -1,7 +1,6 @@
 ---
 name: investigating-ransomware-attack-artifacts
-description: Identify, collect, and analyze ransomware attack artifacts to determine
-  the variant, initial access vector, encryption scope, and recovery options.
+description: Forensically preserve memory and disk, collect ransom notes and encrypted file samples, and identify the ransomware variant using tools such as ID Ransomware, Volatility, and Chainsaw/Hayabusa to determine the initial access vector and recovery options. Use immediately after discovering ransomware encryption, when scoping the incident forensically, or when documenting evidence for law enforcement and insurance claims.
 domain: cybersecurity
 subdomain: digital-forensics
 tags:

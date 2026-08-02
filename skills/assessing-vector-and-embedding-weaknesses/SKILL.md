@@ -1,6 +1,9 @@
 ---
 name: assessing-vector-and-embedding-weaknesses
-description: Test vector stores for embedding inversion, cross-tenant leakage, and poisoning.
+description: Test RAG vector stores (Pinecone, Qdrant, Weaviate, Chroma, pgvector,
+  FAISS) for embedding inversion, cross-tenant data leakage, and data poisoning per
+  OWASP LLM08:2025. Use when performing an authorized security assessment of a RAG
+  pipeline's retrieval layer or auditing multi-tenant vector-store isolation.
 domain: cybersecurity
 subdomain: ai-security
 tags:

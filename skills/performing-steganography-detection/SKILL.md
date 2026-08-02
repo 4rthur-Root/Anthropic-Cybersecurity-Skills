@@ -1,7 +1,12 @@
 ---
 name: performing-steganography-detection
-description: Detect and extract hidden data embedded in images, audio, and other media
-  files using steganalysis tools to uncover covert communication channels.
+description: >-
+  Detects and extracts hidden data embedded in images, audio, and other media
+  files using steganalysis tools such as StegDetect, zsteg, stegsolve,
+  binwalk, steghide, and OpenStego to uncover covert communication channels.
+  Use when investigating suspected data hiding or exfiltration via media
+  files, espionage/insider-threat cases, or anomalies in media file
+  properties found during standard file analysis.
 domain: cybersecurity
 subdomain: digital-forensics
 tags:

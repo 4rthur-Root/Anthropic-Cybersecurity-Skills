@@ -1,7 +1,10 @@
 ---
 name: analyzing-windows-registry-for-artifacts
-description: Extract and analyze Windows Registry hives to uncover user activity,
-  installed software, autostart entries, and evidence of system compromise.
+description: Extract and analyze Windows Registry hives with tools like RegRipper
+  and Registry Explorer to uncover user activity, installed software, autostart/persistence
+  entries, and evidence of system compromise. Use when investigating registry-based
+  persistence, reconstructing user or system activity, or performing DFIR triage
+  on a Windows image.
 domain: cybersecurity
 subdomain: digital-forensics
 tags:

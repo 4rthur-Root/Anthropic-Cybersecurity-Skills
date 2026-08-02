@@ -1,7 +1,6 @@
 ---
 name: analyzing-disk-image-with-autopsy
-description: Perform comprehensive forensic analysis of disk images using Autopsy
-  to recover files, examine artifacts, and build investigation timelines.
+description: Perform comprehensive forensic analysis of raw (dd), E01, or AFF disk images with Autopsy and The Sleuth Kit, recovering deleted files, examining metadata and embedded artifacts, keyword searching, and building investigation timelines with visual reports. Use for structured analysis of a forensic disk image or when stakeholders need visual reports from evidence.
 domain: cybersecurity
 subdomain: digital-forensics
 tags:
