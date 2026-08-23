@@ -383,15 +383,15 @@ Skills have continued to grow on `main` since v1.0.0 — the library now contain
 
 This project grows through community contributions. Here is how to get involved:
 
-**Add a new skill** — Domains like Deception Technology (2 skills) and Compliance & Governance (5 skills) need the most help. Follow the template in [CONTRIBUTING.md](CONTRIBUTING.md) and submit a PR with the title `Add skill: your-skill-name`.
+**Add a new skill** — Read [SCOPE.md](SCOPE.md) first, then the template in [CONTRIBUTING.md](CONTRIBUTING.md). The thinnest domains are the ones most worth adding to: Data Protection and Purple Team have one skill each, and Blockchain Security, Wireless Security and Privacy Compliance have two. Submit one skill per PR, with the title `Add skill: your-skill-name`.
 
-**Improve existing skills** — Add framework mappings, fix workflows, update tool references, or contribute scripts and templates.
+**Improve existing skills** — Add framework mappings, fix workflows, update tool references, or contribute scripts and templates. Deepening a skill that already exists is worth as much to this library as adding a new one.
 
 **Report issues** — Found an inaccurate procedure or broken script? [Open an issue](https://github.com/mukul975/Anthropic-Cybersecurity-Skills/issues).
 
-Every PR is reviewed for technical accuracy and agentskills.io standard compliance within 48 hours.  Check [good first issues](https://github.com/mukul975/Anthropic-Cybersecurity-Skills/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) for a starting point.
+Every PR is reviewed for technical accuracy and agentskills.io standard compliance. I do that review myself, and the queue is currently longer than I would like — some pull requests have been open for months. I am working through them, and small, focused PRs move fastest. Check [good first issues](https://github.com/mukul975/Anthropic-Cybersecurity-Skills/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) for a starting point.
 
-This project follows the [Contributor Covenant](https://www.contributor-covenant.org/). By participating, you agree to uphold this code. 
+This project follows the [Contributor Covenant](https://www.contributor-covenant.org/). By participating, you agree to uphold this code.
 
 ## 🙏 Thanks to our contributors
 
