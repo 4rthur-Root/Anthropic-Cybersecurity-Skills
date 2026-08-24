@@ -39,22 +39,40 @@ EXCLUDE_LOGINS = {"github-actions", "dependabot", "pull"}
 AVATAR_PX = 72
 
 
+def _get(path: str):
+    req = urllib.request.Request(f"https://api.github.com/repos/{REPO}/{path}", headers={
+        "Accept": "application/vnd.github+json",
+        "User-Agent": "update-contributors",
+    })
+    token = os.environ.get("GITHUB_TOKEN")
+    if token:
+        req.add_header("Authorization", f"Bearer {token}")
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        return json.load(resp)
+
+
+def _keep(login: str) -> bool:
+    return bool(login) and not login.endswith(EXCLUDE_SUFFIXES) and login not in EXCLUDE_LOGINS
+
+
 def fetch_contributors() -> list[dict]:
-    """Every non-bot contributor, most contributions first."""
+    """Every non-bot contributor, most contributions first.
+
+    Two endpoints, because one of them lies. /contributors carries the
+    authoritative contribution counts but is heavily cached — a merge can take
+    up to a day to show up there. /commits is live. So anyone whose commit is
+    already linked to their account but has not yet surfaced in /contributors
+    gets picked up from the commit list instead of waiting a day to be thanked.
+
+    Commits authored with an unlinkable email (a machine hostname such as
+    user@HOST.localdomain) have no `author` object and are skipped by both
+    paths. They never appear in GitHub's own contributor graph either, so the
+    wall matches what GitHub itself shows.
+    """
     people: list[dict] = []
     page = 1
     while True:
-        url = f"https://api.github.com/repos/{REPO}/contributors?per_page=100&page={page}"
-        req = urllib.request.Request(url, headers={
-            "Accept": "application/vnd.github+json",
-            "User-Agent": "update-contributors",
-        })
-        token = os.environ.get("GITHUB_TOKEN")
-        if token:
-            req.add_header("Authorization", f"Bearer {token}")
-
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            batch = json.load(resp)
+        batch = _get(f"contributors?per_page=100&page={page}")
         if not batch:
             break
         people.extend(batch)
@@ -62,12 +80,25 @@ def fetch_contributors() -> list[dict]:
             break
         page += 1
 
-    return [
-        p for p in people
-        if p.get("type") != "Bot"
-        and not p.get("login", "").endswith(EXCLUDE_SUFFIXES)
-        and p.get("login") not in EXCLUDE_LOGINS
-    ]
+    known = {p.get("login") for p in people}
+    ranked = [p for p in people if p.get("type") != "Bot" and _keep(p.get("login", ""))]
+
+    # Catch anyone the cached endpoint has not caught up with yet.
+    recent: dict[str, int] = {}
+    for page in (1, 2):
+        for commit in _get(f"commits?per_page=100&page={page}") or []:
+            author = commit.get("author")
+            if not author or author.get("type") == "Bot":
+                continue
+            login = author.get("login", "")
+            if login in known or not _keep(login):
+                continue
+            recent[login] = recent.get(login, 0) + 1
+
+    for login, count in sorted(recent.items(), key=lambda kv: (-kv[1], kv[0])):
+        ranked.append({"login": login, "contributions": count})
+
+    return ranked
 
 
 def render(people: list[dict]) -> str:
