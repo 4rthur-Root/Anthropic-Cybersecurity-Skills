@@ -404,18 +404,25 @@ This project follows the [Contributor Covenant](https://www.contributor-covenant
 
 This library is built by the community. Thank you to everyone who has contributed:
 
+<!-- contributors:start -->
 <p align="center">
 <a href="https://github.com/mukul975" title="mukul975 — maintainer"><img src="https://github.com/mukul975.png?size=100" width="72" height="72" alt="@mukul975"></a>
-<a href="https://github.com/juliosuas" title="juliosuas"><img src="https://github.com/juliosuas.png?size=100" width="72" height="72" alt="@juliosuas"></a>
-<a href="https://github.com/andrewibrah" title="andrewibrah"><img src="https://github.com/andrewibrah.png?size=100" width="72" height="72" alt="@andrewibrah"></a>
-<a href="https://github.com/Bortlesboat" title="Bortlesboat"><img src="https://github.com/Bortlesboat.png?size=100" width="72" height="72" alt="@Bortlesboat"></a>
-<a href="https://github.com/DevRedious" title="DevRedious"><img src="https://github.com/DevRedious.png?size=100" width="72" height="72" alt="@DevRedious"></a>
-<a href="https://github.com/ioxoi" title="ioxoi"><img src="https://github.com/ioxoi.png?size=100" width="72" height="72" alt="@ioxoi"></a>
-<a href="https://github.com/shanujans" title="shanujans"><img src="https://github.com/shanujans.png?size=100" width="72" height="72" alt="@shanujans"></a>
-<a href="https://github.com/nyxst4ck" title="nyxst4ck"><img src="https://github.com/nyxst4ck.png?size=100" width="72" height="72" alt="@nyxst4ck"></a>
+<a href="https://github.com/valorisa" title="valorisa — 18 contributions"><img src="https://github.com/valorisa.png?size=100" width="72" height="72" alt="@valorisa"></a>
+<a href="https://github.com/juliosuas" title="juliosuas — 13 contributions"><img src="https://github.com/juliosuas.png?size=100" width="72" height="72" alt="@juliosuas"></a>
+<a href="https://github.com/Daytona39264" title="Daytona39264 — 3 contributions"><img src="https://github.com/Daytona39264.png?size=100" width="72" height="72" alt="@Daytona39264"></a>
+<a href="https://github.com/kevglynn" title="kevglynn — 2 contributions"><img src="https://github.com/kevglynn.png?size=100" width="72" height="72" alt="@kevglynn"></a>
+<a href="https://github.com/andrewibrah" title="andrewibrah — 2 contributions"><img src="https://github.com/andrewibrah.png?size=100" width="72" height="72" alt="@andrewibrah"></a>
+<a href="https://github.com/Bortlesboat" title="Bortlesboat — 1 contribution"><img src="https://github.com/Bortlesboat.png?size=100" width="72" height="72" alt="@Bortlesboat"></a>
+<a href="https://github.com/DevRedious" title="DevRedious — 1 contribution"><img src="https://github.com/DevRedious.png?size=100" width="72" height="72" alt="@DevRedious"></a>
+<a href="https://github.com/ioxoi" title="ioxoi — 1 contribution"><img src="https://github.com/ioxoi.png?size=100" width="72" height="72" alt="@ioxoi"></a>
+<a href="https://github.com/OctoBored" title="OctoBored — 1 contribution"><img src="https://github.com/OctoBored.png?size=100" width="72" height="72" alt="@OctoBored"></a>
+<a href="https://github.com/shanujans" title="shanujans — 1 contribution"><img src="https://github.com/shanujans.png?size=100" width="72" height="72" alt="@shanujans"></a>
+<a href="https://github.com/farhan6667" title="farhan6667 — 1 contribution"><img src="https://github.com/farhan6667.png?size=100" width="72" height="72" alt="@farhan6667"></a>
+<a href="https://github.com/nyxst4ck" title="nyxst4ck — 1 contribution"><img src="https://github.com/nyxst4ck.png?size=100" width="72" height="72" alt="@nyxst4ck"></a>
 </p>
 
-<p align="center"><sub>Ordered by contribution count · see the full <a href="https://github.com/mukul975/Anthropic-Cybersecurity-Skills/graphs/contributors">contributor graph</a></sub></p>
+<p align="center"><sub>13 contributors, ordered by contribution count · see the full <a href="https://github.com/mukul975/Anthropic-Cybersecurity-Skills/graphs/contributors">contributor graph</a></sub></p>
+<!-- contributors:end -->
 
 ## Community
 
